@@ -12,12 +12,15 @@ function add() {
     // local variable cannot be used outside the function
     //result = num1 + num2;
 
-    let returnResult = currentResult + userInput.value;
+    currentResult = currentResult + parseInt(userInput.value);
+
+    currentResult.toString(); // function to convert int to String
     let calculationDesc = ` (${defaultVal} + 10) * 3 / 2 - 1 `; // reduces the concatination
-    outputResult(returnResult, calculationDesc);
+    outputResult(currentResult, calculationDesc);
     // any statement after return does not execute
 
 }
+
 
 // add function will only be executed when the button is clicked
 addBtn.addEventListener('click', add);
