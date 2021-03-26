@@ -1,17 +1,18 @@
 const defaultVal = 0;
 
-let currentResult = defaultVal;
+let currentResult;
 
 // function to add number
+// it is not important where we define function
 function add(num1, num2) {
     // defaultVal is at the global scope
     // result is at the local scope to the function
     const result = num1 + num2;
-
     return result;
 }
 
-currentResult = currentResult + 10;
+
+currentResult = add(1, 2);
     
     
 //let calculationDesc = '(0 + 10) * 3 / 2 - 1';
